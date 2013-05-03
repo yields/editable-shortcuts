@@ -1,0 +1,16 @@
+{
+  "name": "editable-shortcuts",
+  "repo": "yields/editable-shortcuts",
+  "description": "add keyboard shortcuts to `Editable` instance.",
+  "version": "0.0.1",
+  "keywords": ["editable", "shortcuts"],
+  "dependencies": {
+    "yields/k": "*"  
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
