@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>editable shortcuts</title>
+    <script src='build/build.js'></script>
+  </head>
+  <body>
+    <p>type, use command + b for <b>bold</b>, command + i for <i>italic</i></p>
+
+    <script>
+      var shortcuts = require('editable-shortcuts')
+        , Editable = require('editable')
+        , editable = new Editable(document.body);
+
+      editable.enable();
+      editable.el.focus();
+
+      shortcuts(editable)
+      .map('command + b', 'bold')
+      .map('command + i', 'italic');
+    </script>
+  </body>
+</html>

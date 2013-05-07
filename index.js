@@ -22,13 +22,18 @@ var dispatcher = require('k');
  */
 
 module.exports = function(editable){
-  var k = dispatcher(editable.el);
-  return { map: map };
+  var k = dispatcher(editable.el)
+    , ret = {};
 
-  function map(keys, cmd){
-    return function(e){
+  // map `shortcut` to `cmd`.
+  ret.map = function(shortcut, cmd){
+    k(shortcut, function(e){
       e.preventDefault();
       editable.execute(cmd);
-    };
-  }
+    });
+    return ret;
+  };
+
+  // api
+  return ret;
 };

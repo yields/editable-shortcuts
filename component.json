@@ -7,7 +7,9 @@
   "dependencies": {
     "yields/k": "*"  
   },
-  "development": {},
+  "development": {
+    "yields/editable": "*"
+  },
   "license": "MIT",
   "main": "index.js",
   "scripts": [
